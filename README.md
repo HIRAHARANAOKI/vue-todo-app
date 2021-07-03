@@ -1,24 +1,23 @@
-# todo-app
+# Vue3 Todo App
 
-## Project setup
+Vueを使用した簡単なTodoアプリ
+
+# Demo
+![画面収録-2021-07-03-22 31 22](https://user-images.githubusercontent.com/63541457/124356121-63cf7700-dc4f-11eb-9dc2-daa08ae1bb11.gif)
+
+# Requirement
+- Vue 3.0.0
+- ElementPlus 1.0.2-beta.54
+
+# Usage
 ```
-yarn install
+npm install
 ```
 
-### Compiles and hot-reloads for development
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Auther
+- 平原尚樹
+- エンジニアインターン中
