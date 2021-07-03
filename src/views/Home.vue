@@ -1,11 +1,9 @@
 <template>
 <el-container>
   <el-main>
-
-
 	<h1>Vue3 Todo App</h1>
+	
 	<el-form @submit.prevent="addTodo">
-
 		<el-input
 			v-model="newTodo"
 			name="newTodo"
@@ -15,6 +13,7 @@
     </el-input>
 		<el-button @click="addTodo" type="danger">追加</el-button>
 	</el-form>
+
 	<h2>ToDo List</h2>
 	<ul>
 		<li
@@ -26,11 +25,12 @@
 				@click="doneTodo(todo)"
 			>{{ todo.content }}</span>
 
-		<!-- 編集用のフォーム。 -->
-		<form @submit.prevent="updateTodo" v-show="todo.show">
+		<!-- 編集用のフォーム -->
+		<form @submit.prevent="updateTodo(todo, index)" v-show="todo.show">
 			<el-input v-model="newUpdateTodo"></el-input>
 			<el-button @click="updateTodo(todo, index)">変更する</el-button>
 		</form>
+		<!-- 普段は非表示 -->
 
       <div>
 				<el-button @click="toggleTodo(todo)" type="primary">完了</el-button>
@@ -94,7 +94,7 @@
 				saveData();
 			}
 
-			// 入れ替え
+			// liタグのtex-decorationの切り替え
 			const toggleTodo = (todo) => {
 				todo.done = !todo.done
 				saveData();
